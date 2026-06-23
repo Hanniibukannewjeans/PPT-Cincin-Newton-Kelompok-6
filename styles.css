@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -484,14 +485,415 @@ body {
   padding: 12px;
   overflow: hidden;
 }
-.data-table1 th,
-.data-table1 td{
-  border: 1px solid #444;
-  padding: 5px 6px;
+}
+
+=======
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.presentation-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+  
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('Graha.png');
+    background-size: cover;
+    background-position: center bottom;
+    opacity: var(--graha-opacity, 1);
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+.gambarbebas {
+    position: absolute;
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+    width: min(42vw, 520px);
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    z-index: 5;
+    border: 2px solid rgba(0, 51, 102, 0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.6);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gambarbebas img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.gambarbebas .gambar-caption {
+    margin: 8px 0 0 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #1f2d3d;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(255,255,255,0.8);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.slide-skema-alat .gambarbebas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(78vw, 900px);
+    max-width: 900px;
+    max-height: 62vh;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255,255,255,0.35);
+}
+
+.slide-skema-alat .gambarbebas img {
+    width: 100%;
+    max-height: 56vh;
+    object-fit: contain;
+}
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.gambar-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gambar-item {
   text-align: center;
 }
 
-.data-table1 th{
-  background: #f1f1f1;
+.gambar-item img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+.contentskema {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    
+    color: #003366;
+}
+
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide.prev { opacity: 0; }
+.slide.next { opacity: 0; }
+
+.animate-slide { transform: translateX(100%); transition: transform 0.8s cubic-bezier(0.25,1,0.5,1), opacity 0.8s ease; }
+.animate-slide.active { transform: translateX(0); }
+.animate-slide.prev { transform: translateX(-100%); }
+.animate-slide.next { transform: translateX(100%); }
+
+.animate-fade { transform: none; transition: opacity 0.6s ease; }
+.animate-fade.active { opacity: 1; }
+.animate-fade.prev, .animate-fade.next { opacity: 0; }
+
+.animate-zoom { transform: scale(1.15); transition: transform 0.7s ease, opacity 0.7s ease; }
+.animate-zoom.active { transform: scale(1); }
+.animate-zoom.prev { transform: scale(0.85); }
+.animate-zoom.next { transform: scale(1.15); }
+
+.animate-up { transform: translateY(100%); transition: transform 0.8s cubic-bezier(0.25,1,0.5,1), opacity 0.8s ease; }
+.animate-up.active { transform: translateY(0); }
+.animate-up.prev { transform: translateY(-100%); }
+.animate-up.next { transform: translateY(100%); }
+
+.animate-rotate { transform: rotateY(90deg); transform-origin: center; transition: transform 0.8s ease, opacity 0.8s ease; }
+.animate-rotate.active { transform: rotateY(0); }
+.animate-rotate.prev { transform: rotateY(-90deg); }
+.animate-rotate.next { transform: rotateY(90deg); }
+
+.animate-scale { transform: scale(0.9); transition: transform 0.7s cubic-bezier(0.25,1,0.5,1), opacity 0.7s ease; }
+.animate-scale.active { transform: scale(1); }
+.animate-scale.prev { transform: scale(1.05); }
+.animate-scale.next { transform: scale(0.9); }
+
+
+.header img {
+    height: 60px;
+    margin: 20px;
+}
+
+.content {
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #003366;
+}
+
+
+.content h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+.content h2 {
+    font-size: 3em;
+    margin-top: 10px;
+}
+.content p {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.graph-slide {
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: -20px;
+}
+
+.graph-slide h2 {
+    text-align: center;
+    margin: 0 0 4px 0;
+    font-size: 1.85em;
+    padding-top: 0;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.graph-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph-image-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 290px;
+    padding: 8px;
+    margin: 0;
+}
+
+.graph-image-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.graph-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #1f2d3d;
+    text-align: center;
+}
+
+.calculation-slide {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -10px;
+}
+
+.calculation-slide h2 {
+    text-align: center;
+    margin: 0 0 6px 0;
+    font-size: 2.0em;
+    padding-top: 0;
+}
+
+.calculation-intro {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.calculation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 8px;
+}
+
+.calculation-column {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 51, 102, 0.15);
+    border-radius: 14px;
+    padding: 18px 20px;
+    min-height: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.calculation-column h3 {
+    font-size: 1.25em;
+    margin: 0 0 12px 0;
+    color: #003366;
+}
+
+.text-box {
+    border: 2px dashed rgba(0, 51, 102, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.text-box p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.6;
+    color: #244;
+}
+
+.content2 {
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: min(52vw, 700px);
+    color: #003366;
+}
+
+.content2 h1 {
+    font-size: 4em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+.content2 h2 {
+    font-size: 2.6em;
+    margin-top: 1.2em;
+    margin-right: 0;
+}
+.content2 p {
+    font-size: 1.25em;
+    margin-top: 0.6em;
+    margin-right: 0;
+    margin-bottom: 0em;
+    line-height: 1.5;
+}
+.ferro-content {
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: min(48vw, 650px);
+    color: #003366;
+}
+
+.ferro-content h2 {
+    position: absolute;
+    top: 20vh;
+    left: 80px;
+    right: auto;
+    margin: 0;
+    font-size: 3.2em;
+    line-height: 1.05;
+    z-index: 6;
+}
+
+.ferro-content p {
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ferro-image {
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+    width: min(38vw, 480px);
+    max-width: 480px;
+}
+
+
+
+.daftar-isi-title {
+    font-size: 3em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #003366;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.grid-daftar-isi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 90%;
+}
+
+.bab-box {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.bab-box h3 {
+    font-size: 1.3em;
+    margin: 0 0 8px 0;
+    color: #003366;
+}
+
+.bab-box p {
+    font-size: 1em !important;
+    margin: 0 !important;
+    color: #333;
+    line-height: 1.4;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+>>>>>>> a96806c93ab96642d7cde82d4196ba1786b84abb
