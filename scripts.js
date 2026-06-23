@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const slides = Array.from(document.querySelectorAll('.slide'));
 let currentSlideIndex = 0;
 
@@ -58,7 +58,7 @@ window.addEventListener('touchend', (e) => {
     if (dx < -40) changeSlide(Math.min(currentSlideIndex + 1, slides.length - 1));
     else if (dx > 40) changeSlide(Math.max(currentSlideIndex - 1, 0));
 });
-=======
+
 const slides = Array.from(document.querySelectorAll('.slide'));
 let currentSlideIndex = 0;
 
@@ -118,4 +118,4 @@ window.addEventListener('touchend', (e) => {
     if (dx < -40) changeSlide(Math.min(currentSlideIndex + 1, slides.length - 1));
     else if (dx > 40) changeSlide(Math.max(currentSlideIndex - 1, 0));
 });
->>>>>>> a96806c93ab96642d7cde82d4196ba1786b84abb
+
