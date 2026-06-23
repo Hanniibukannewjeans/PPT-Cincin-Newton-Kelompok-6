@@ -59,9 +59,6 @@ window.addEventListener('touchend', (e) => {
     else if (dx > 40) changeSlide(Math.max(currentSlideIndex - 1, 0));
 });
 
-const slides = Array.from(document.querySelectorAll('.slide'));
-let currentSlideIndex = 0;
-
 slides.forEach((s, i) => {
     if (i === currentSlideIndex) {
         s.classList.add('active');
