@@ -115,6 +115,28 @@ body {
   text-align: center;
 }
 
+/*gambar dalir*/
+.gambar-item2 img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.contentskema3 {
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #003366;
+}
+.contentskema3 h2 {
+    font-size: 3em;
+    margin-top: -5px;
+}
+
+.contentskema3 p {
+    font-size: 1em;
+    text-align: center;
+}
+
 .gambar-item img {
   width: 500px;
   max-width: 100%;
@@ -473,10 +495,16 @@ body {
   text-align: center;
   align-items: center;
 }
+.table-title1{
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
 .data-table1{
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 16px;
 }
 .table-card1{
   background: rgba(255,255,255,0.85);
@@ -484,6 +512,15 @@ body {
   border-radius: 10px;
   padding: 12px;
   overflow: hidden;
+}
+.data-table1 th,
+.data-table1 td{
+  border: 1px solid #444;
+  padding: 5px 6px;
+  text-align: center;
+}
+.data-table1 th{
+  background: #f1f1f1;
 }
 
 body {
@@ -608,6 +645,19 @@ body {
   height: auto;
   display: block;
 }
+
+/*grafik*/
+.gambar-item2 {
+  text-align: center;
+}
+
+.gambar-item2 img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .contentskema {
     margin-left: 80px;
