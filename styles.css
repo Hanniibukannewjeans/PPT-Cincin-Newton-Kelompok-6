@@ -35,6 +35,111 @@ body {
     z-index: -1;
     transition: opacity 0.5s ease;
 }
+.gambarbebas {
+    position: absolute;
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+    width: min(42vw, 520px);
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    z-index: 5;
+    border: 2px solid rgba(0, 51, 102, 0.15);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.6);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gambarbebas img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.gambarbebas .gambar-caption {
+    margin: 8px 0 0 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #1f2d3d;
+    text-align: center;
+    font-style: italic;
+    font-weight: 700;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(255,255,255,0.8);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.slide-skema-alat .gambarbebas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(78vw, 900px);
+    max-width: 900px;
+    max-height: 62vh;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255,255,255,0.35);
+}
+
+.slide-skema-alat .gambarbebas img {
+    width: 100%;
+    max-height: 56vh;
+    object-fit: contain;
+}
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.gambar-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.gambar-item {
+  text-align: center;
+}
+
+.gambar-item img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gambar-item1 img {
+  width: 400px;
+  margin-top: 6em;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contentskema {
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #003366;
+}
+.contentskema h2 {
+    font-size: 3em;
+    margin-top: 5px;
+}
+
+
 
 .slide.active {
     opacity: 1;
@@ -98,6 +203,177 @@ body {
     font-size: 1.5em;
     margin-top: 30px;
 }
+.content li {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.graph-slide {
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: -20px;
+}
+
+.graph-slide h2 {
+    text-align: center;
+    margin: 0 0 4px 0;
+    font-size: 1.85em;
+    padding-top: 0;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.graph-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.graph-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.graph-image-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    min-height: 290px;
+    padding: 8px;
+    margin: 0;
+}
+
+.graph-image-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.graph-caption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #1f2d3d;
+    text-align: center;
+}
+
+.calculation-slide {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -10px;
+}
+
+.calculation-slide h2 {
+    text-align: center;
+    margin: 0 0 6px 0;
+    font-size: 2.0em;
+    padding-top: 0;
+}
+
+.calculation-intro {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.calculation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 8px;
+}
+
+.calculation-column {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 51, 102, 0.15);
+    border-radius: 14px;
+    padding: 18px 20px;
+    min-height: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.calculation-column h3 {
+    font-size: 1.25em;
+    margin: 0 0 12px 0;
+    color: #003366;
+}
+
+.text-box {
+    border: 2px dashed rgba(0, 51, 102, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.text-box p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.6;
+    color: #244;
+}
+
+.content2 {
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: min(52vw, 700px);
+    color: #003366;
+}
+
+.content2 h1 {
+    font-size: 4em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+.content2 h2 {
+    font-size: 2.6em;
+    margin-top: 1.2em;
+    margin-right: 0;
+}
+.content2 p {
+    font-size: 1.5em;
+    margin-top: 0.6em;
+    margin-right: 0;
+    margin-bottom: 0em;
+    line-height: 1.5;
+}
+.ferro-content {
+    margin-left: 80px;
+    margin-right: 20px;
+    max-width: min(48vw, 650px);
+    color: #003366;
+}
+
+.ferro-content h2 {
+    position: absolute;
+    top: 20vh;
+    left: 80px;
+    right: auto;
+    margin: 0;
+    font-size: 3.2em;
+    line-height: 1.05;
+    z-index: 6;
+}
+
+.ferro-content p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ferro-image {
+    top: 50%;
+    right: 3vw;
+    transform: translateY(-50%);
+    width: min(38vw, 480px);
+    max-width: 480px;
+}
+
 
 
 .daftar-isi-title {
@@ -145,3 +421,77 @@ body {
     height: auto;
     display: block;
 }
+
+
+/*tabel*/
+
+.table-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+
+.table-card{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.table-title{
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.data-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.data-table th,
+.data-table td{
+  border: 1px solid #444;
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.data-table th{
+  background: #f1f1f1;
+}
+
+/*tabel hasil*/
+.table-grid1 {
+  display: grid;
+  gap: 16px;
+  text-align: center;
+  align-items: center;
+}
+.data-table1{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table-card1{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 12px;
+  overflow: hidden;
+}
+.data-table1 th,
+.data-table1 td{
+  border: 1px solid #444;
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.data-table1 th{
+  background: #f1f1f1;
+}
+
