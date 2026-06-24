@@ -374,7 +374,7 @@ body {
 
 .ferro-content h2 {
     position: absolute;
-    top: 20vh;
+    top: 50px;
     left: 80px;
     right: auto;
     margin: 0;
@@ -944,4 +944,5 @@ body {
     height: auto;
     display: block;
 }
+
 
