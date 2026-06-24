@@ -374,7 +374,7 @@ body {
 
 .ferro-content h2 {
     position: absolute;
-    top: 50px;
+    top: 20vh;
     left: 80px;
     right: auto;
     margin: 0;
@@ -474,7 +474,7 @@ body {
 .data-table{
   width: 100%;
   border-collapse: collapse;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .data-table th,
@@ -945,4 +945,18 @@ body {
     display: block;
 }
 
+/*text box 2*/
+.text-box2 {
+    border: 2px dashed rgba(0, 51, 102, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 220px;
+    background: rgba(255, 255, 255, 0.6);
+}
 
+.text-box2 p {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 1.6;
+    color: #244;
+}
